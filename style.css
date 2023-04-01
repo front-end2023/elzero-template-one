@@ -1,0 +1,314 @@
+:root{
+    --green-color: #10cab7;
+    --lightgray-color: #f6f6f6;
+    --midgray-color: #777777;
+    --bigfont-color:#EBECED;
+    --dark-blue: #2C4755;
+}
+*{
+    font-family: "Work Sans", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+nav .container{
+    display: flex;
+    padding: 15px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .menu{
+    /* border: 1px solid red; */
+    position: relative;
+    padding: 10px;
+}
+nav .menu span{
+    display: block;
+    width: 30px;
+    height: 15px;
+    border-top: 2px solid black ;
+    border-bottom: 2px solid black ;
+    position: relative;
+}
+nav .menu span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translatey(-50%);
+    transition: 0.5s ease;
+}
+nav .menu span:hover::after{
+    width: 30px;
+}
+nav .menu:hover ul{
+    display: block;
+}
+nav .menu ul{
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: none;
+}
+nav .menu ul li{
+    background-color: var(--lightgray-color);
+    width: 200px;
+}
+nav .menu ul a{
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    padding: 15px 5px;
+    transition: 0.5s ease;
+}
+nav .menu ul a:hover{
+    translate: 10px;
+}
+.bord{
+    border-bottom: 1px solid #7777776b;
+}
+/* Header start */
+header{
+    background: url(images/landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header h1{
+    color: var(--green-color);
+    font-size: 3rem;
+    padding: 15px;
+}
+header p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+/* Header End */
+
+/* Section 1 start */
+.sec-1{
+    background-color: var(--lightgray-color);
+}
+.sec-1 .container-1{
+    padding: 50px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+    gap: 20px;
+}
+.container-1 .card{
+    text-align: center;
+    padding: 20px;
+}
+.container-1 h3{
+    font-weight: 800;
+}
+.container-1 p{
+    padding: 20px;
+    color: var(--midgray-color);
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.container-1 i{
+    font-size: 3rem;
+    color: var(--green-color);
+    padding: 20px;
+}
+/* Section 1 End */
+
+
+/* Section 2 start */
+
+.sec-2{
+    padding: 50px 60px;
+}
+.main-head{
+    text-align: center;
+}
+.main-head h1{
+    font-size: 6em;
+    font-weight: 800;
+    color: var(--bigfont-color);
+}
+.main-head p{
+    color: var(--midgray-color);
+    font-size: 1.25em;
+    margin-top: -30px;
+}
+.sec-2-bottom{
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    
+}
+.sec-2-left{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 40px;
+}
+.sec-2-left .content{
+    display: flex;
+    padding: 0 80px;
+    gap: 30px;
+}
+.sec-2-left .content i{
+    color: var(--green-color);
+    font-size: 2em;
+}
+.sec-2-left .content h3{
+    margin-bottom: 20px;
+}
+.sec-2-left .content p{
+    color: var(--midgray-color);
+    line-height: 1.5em;
+}
+.sec-2 .right{
+    position: relative;
+}
+.sec-2 .right .empty{
+    width: 100px;
+    height: 120%;
+    background-color: var(--dark-blue);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-55%);
+    z-index: -1;
+}
+.sec-2 .right img{
+    position: relative;
+    right: 50px;
+}
+/* Section 2 End */
+
+/* Section 3 start */
+.sec-3{
+    background-color: var(--lightgray-color);
+    padding: 50px 80px;
+}
+.sec-3 .sec-3-bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    gap: 30px;
+    margin: 80px 0;
+}
+.sec-3-bottom .sec-3-card{
+    background-color: white;
+}
+.sec-3 .sec-3-bottom img{
+    width: 100%;
+}
+.sec-3-card .title{
+    padding: 20px;
+}
+.sec-3-card .title p{
+    color: var(--midgray-color);
+    line-height: 1.5em;
+    margin-top: 20px;
+}
+/* Section 3 End */
+
+/* Section 4 start */
+.sec-4{
+    margin: 50px 0;
+}
+.sec-4-bottom{
+    margin-top: 50px;
+    padding: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sec-4-bottom .sec-4-left{
+    position: relative;
+}
+.sec-4-bottom .sec-4-left::after{
+    content: '';
+    width: 100px;
+    height: 450px;
+    background-color: var(--bigfont-color);
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(0,-50%);
+    z-index: -1;
+}
+.sec-4-bottom .sec-4-left::before{
+    content: '';
+    height: 300px;
+    width: 80px;
+    border-left: 80px solid var(--green-color);
+    border-bottom: 80px solid var(--green-color);
+    position: absolute;
+    top: -35px;
+    right: -110px;
+    z-index: -2;
+}
+.sec-4-bottom .sec-4-right{
+    width: 50%;
+    min-width: 400px;
+}
+.sec-4-bottom .sec-4-right .one{
+    font-weight: 700;
+    line-height: 2em;
+    margin-bottom: 50px;
+}
+.sec-4-bottom .sec-4-right .two{
+    width: 50%;
+    height: 2px;
+    background-color: var(--green-color);
+    margin-bottom: 50px;
+}
+.sec-4-bottom .sec-4-right .three{
+    font-weight: 500;
+    color: var(--midgray-color);
+    line-height: 2em;
+    margin-bottom: 50px;
+}
+/* Section 4 End */
+/* Section 5 start */
+.sec-5{
+    background-color: var(--lightgray-color);
+    padding: 50px 100px
+}
+.sec-5 .bottom-5{
+    margin: 100px 0;
+    text-align: center;
+}
+.sec-5 .bottom-5 .one-5{
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--dark-blue);
+    padding: 20px 0;
+}
+.sec-5 .bottom-5 .two-5{
+    font-size: 1.75em;
+    font-weight: 800;
+    color: var(--green-color);
+    padding: 20px 0;
+}
+.sec-5 .bottom-5 i{
+    padding: 0 7px;
+    color: var(--midgray-color);
+}
+/* Section 5 End */
+/* Section 6 start */
+.sec-6{
+    background-color: var(--dark-blue);
+    padding: 30px 0;
+    text-align: center;
+}
+.sec-6 p{
+    font-size: 1.2em;
+    color: white;
+}
+.sec-6 span{
+    color: var(--green-color);
+    font-weight: 800;
+}
